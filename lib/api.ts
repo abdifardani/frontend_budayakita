@@ -13,7 +13,7 @@ export type Culture = {
 };
 export async function getCultures(): Promise<Culture[]> {
   try {
-    const res = await fetch(`${API_URL}/cultures`, { cache: "no-store" });
+    const res = await fetch(`https://budayakita.vercel.app/api/cultures`, { cache: "no-store" });
     if (!res.ok) return [];
     const json = await res.json();
     return json.data || [];
